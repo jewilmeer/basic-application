@@ -1,0 +1,20 @@
+%h1 All blogs
+
+- if @blogs.any?
+  %table
+    %thead
+      %tr
+        %th Title
+        %th Author
+        %th Controls
+    - @blogs.each do |blog|
+      %tr[blog]
+        %td= blog.title
+        %td= blog.author
+        %td
+          = link_to blog.title, blog
+- else
+  %p There are nog blogs yet, would you like to create one?
+
+.form-actions
+  = link_to 'New blog', new_blog_path, class: 'btn btn-primary'
