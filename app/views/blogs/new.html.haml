@@ -1,0 +1,8 @@
+%h1 Create a new blog
+= simple_form_for @blog do |f|
+  = f.input :title
+  = f.input :permalink
+  = f.input :author
+  = f.input :description
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'
