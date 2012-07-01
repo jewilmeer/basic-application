@@ -9,10 +9,10 @@
         %th Controls
     - @blogs.each do |blog|
       %tr[blog]
-        %td= blog.title
+        %td= blog.title.titleize
         %td= blog.author
         %td
-          = link_to blog.title, blog
+          = link_to 'Show', blog
 - else
   %p There are nog blogs yet, would you like to create one?
 
