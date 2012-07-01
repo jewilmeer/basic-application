@@ -16,4 +16,8 @@ describe BlogsController do
       assigns(:blog).should be_a Blog
     end
   end
+  describe "create" do
+    before { get :create }
+
+  end
 end
