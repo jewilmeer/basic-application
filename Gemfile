@@ -45,3 +45,7 @@ group :test do
   gem 'email_spec', require: false
   gem 'launchy'
 end
+
+group :production do
+  gem 'unicorn'
+end
